@@ -1,14 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+
 import './App.css'
+import { PingComponent } from './components/atoms/PingComponent';
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isVisible,setIsVisible] = useState(false);
 
   return (
     <>
-      <h1>Hello world</h1>
+      <button onClick={()=> setIsVisible(!isVisible)}>Toggle</button>
+      {isVisible && <PingComponent/>}
     </>
   )
 }
