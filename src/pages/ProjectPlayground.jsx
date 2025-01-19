@@ -16,7 +16,7 @@ export const ProjectPlayground = () =>{
     },[setProjectId,projectIdFromUrl]);
     return (
         <>
-            <h1>ProjectId is : {projectIdFromUrl}</h1>
+           <div style={{display:'flex', height:"99.7vh"}}>
             {projectId &&(<div style={{
                 backgroundColor:'#333254',
                 paddingRight:"10px",
@@ -29,6 +29,7 @@ export const ProjectPlayground = () =>{
             </div>)
              }
             <EditorComponent/>
+            </div>
            
         </>
     )
